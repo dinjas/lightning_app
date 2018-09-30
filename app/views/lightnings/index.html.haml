@@ -1,0 +1,35 @@
+%h2 Scheduled Lightning Bolts
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Intensity
+      %th Bolt Type
+      %th Charge
+      %th Strike At
+      %th Created At
+      %th Updated At
+      %th
+
+  %tbody
+    - if @lightnings.empty?
+      %tr
+        %td{ colspan: 8 }
+          No lightning
+
+    - @lightnings.each do |lightning|
+      %tr
+        %td= lightning.name
+        %td= lightning.intensity
+        %td= lightning.bolt_type
+        %td= lightning.charge
+        %td= lightning.strike_at.strftime("%m/%d/%-Y")
+        %td= lightning.created_at.strftime("%m/%d/%-Y")
+        %td= lightning.updated_at.strftime("%m/%d/%-Y")
+        %td= history_link_for_object(lightning)
+%br
+
+#history_modal
+  %h3#history_modal_header
+  #history_modal_body

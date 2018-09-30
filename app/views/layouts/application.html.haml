@@ -1,0 +1,24 @@
+!!!
+- app_name = 'Lightning App'
+%html
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name: 'viewport' }/
+    %title= content_for?(:title) ? yield(:title) : app_name
+    %meta{ content: content_for?(:description) ? yield(:description) : app_name,
+           name: 'description' }/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = csrf_meta_tags
+  %body
+    %header
+      %p.notice= flash[:notice]
+      %p.alert= flash[:alert]
+    %main#main{ role: 'main' }
+      %h1 Lightning Management Console
+      - if current_user
+        %hr
+        %h3 Signed in as: #{current_user.name}
+        %hr
+      .container
+        = yield

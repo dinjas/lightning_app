@@ -1,0 +1,13 @@
+= form_with(model: lightning, local: true) do |f|
+  - if lightning.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(lightning.errors.count, "error")
+        prohibited this lightning from being saved:
+
+      %ul
+        - lightning.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit
