@@ -4,6 +4,7 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
   def story
+    return unless PaperTrail.request.enabled_for_model?(self.class)
     PaperTrailScrapbook::LifeHistory.new(self).story
   end
 

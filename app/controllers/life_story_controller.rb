@@ -4,8 +4,6 @@ class LifeStoryController < ApplicationController
   before_action :authenticate_user!
 
   def history
-    return fail_422 unless PaperTrail.request.enabled_for_model?(klass)
-
     obj = klass.find(obj_id)
     return fail_422 unless can_history?(obj)
 

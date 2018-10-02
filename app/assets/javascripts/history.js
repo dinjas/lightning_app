@@ -2,7 +2,7 @@ let history_link_selector = '.scrapbook';
 
 $(function () {
   $(document).on('click', history_link_selector, function(e) {
-    $.get(history_url($(this)), history_args, function(response_data) {
+    $.get(history_url($(this)), {}, function(response_data) {
       let $modal = $(history_modal_selector);
 
       setModalContent($modal, response_data);
@@ -16,7 +16,6 @@ $(function () {
 let history_modal_selector         = '#history_modal';
 let history_modal_header_selector  = '#history_modal_header';
 let history_modal_body_selector    = '#history_modal_body';
-let history_args                   = {};
 
 function history_url($ele) {
   let obj_id       = $ele.data('id');
