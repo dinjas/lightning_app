@@ -47,6 +47,9 @@ function showModal($modal) {
         }
       }
     ],
-    width: 600
+    width: 700,
+    open: function (event, ui) {
+      $('.ui-widget-overlay').addClass('override');
+    }
   });
 }
