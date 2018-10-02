@@ -8,7 +8,7 @@ if User.count.zero?
   hades      = FactoryBot.create(:user, name: 'Hades')
   hermes     = FactoryBot.create(:user, name: 'Hermes')
   poseidon   = FactoryBot.create(:user, name: 'Poseidon')
-  zeus       = FactoryBot.create(:user, name: 'Zeus', email: 'zeus@dinjas.com')
+  zeus       = FactoryBot.create(:user, name: 'Zeus', email: 'zeus@mail.com')
 
   users = User.all
 
