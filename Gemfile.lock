@@ -1,13 +1,3 @@
-GIT
-  remote: https://github.com/dinjas/paper_trail_scrapbook.git
-  revision: 4ffc66b175698c1518703077885103860b52cccd
-  specs:
-    paper_trail_scrapbook (0.1.12)
-      activerecord (>= 4.0, <= 5.3)
-      adamantium
-      concord
-      paper_trail (>= 5.2, <= 9.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -169,6 +159,11 @@ GEM
       paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
     paper_trail-association_tracking (1.0.0)
+    paper_trail_scrapbook (0.1.12)
+      activerecord (>= 4.0, <= 5.2.1)
+      adamantium
+      concord
+      paper_trail (>= 5.2, <= 9.2.0)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -325,7 +320,7 @@ DEPENDENCIES
   jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
   paper_trail
-  paper_trail_scrapbook!
+  paper_trail_scrapbook
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.1)
