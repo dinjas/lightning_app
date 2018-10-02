@@ -24,6 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'annotate'
+  gem 'awesome_print'
   gem 'factory_bot_rails'
   gem 'hint-rubocop_style'
   gem 'pry-rails'
