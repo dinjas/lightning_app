@@ -11,4 +11,8 @@ module ApplicationHelper
       fa_icon('book')
     end
   end
+
+  def show_pts?
+    params[:pts].present?
+  end
 end

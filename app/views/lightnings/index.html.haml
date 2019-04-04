@@ -10,12 +10,13 @@
       %th Strike At
       %th Created At
       %th Updated At
-      %th
+      - if show_pts?
+        %th
 
   %tbody
     - if @lightnings.empty?
       %tr
-        %td{ colspan: 8 }
+        %td{ colspan: show_pts? ? 8 : 7 }
           No lightning
 
     - @lightnings.each do |lightning|
@@ -27,7 +28,8 @@
         %td= lightning.strike_at.strftime("%m/%d/%-Y")
         %td= lightning.created_at.strftime("%m/%d/%-Y")
         %td= lightning.updated_at.strftime("%m/%d/%-Y")
-        %td= history_link_for_object(lightning)
+        - if show_pts?
+          %td= history_link_for_object(lightning)
 %br
 
 #history_modal

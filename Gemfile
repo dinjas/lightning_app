@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.6.2'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
@@ -15,7 +15,7 @@ gem 'jquery-ui-rails'
 gem 'paper_trail'
 gem 'paper_trail_scrapbook', github: 'tjchambers/paper_trail_scrapbook', branch: 'master'
 gem 'puma'
-gem 'rails', '5.2.2.1'
+gem 'rails', '5.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'sqlite3', '~> 1.3.6'
 gem 'timecop'
